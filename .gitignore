@@ -1,0 +1,53 @@
+# Arquivos compilados
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Ambientes virtuais
+.venv/
+venv/
+ENV/
+env/
+env.bak/
+
+# Configurações de IDEs
+.vscode/
+.idea/
+*.swp
+
+# Logs e caches
+*.log
+*.pot
+*.pyc
+*.pyo
+*.pyd
+*.sqlite3
+db.sqlite3
+*.db
+*.egg-info/
+.eggs/
+.mypy_cache/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*.ipynb
+
+# Build e distribuição
+build/
+dist/
+pip-wheel-metadata/
+*.egg
+MANIFEST
+
+# Arquivos de sistema
+.DS_Store
+Thumbs.db
+
+# Outros opcionais
+*.env
+*.ini
+*.cfg
+*.bak

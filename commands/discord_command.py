@@ -1,6 +1,7 @@
 # commands/discord_command.py
 from types import ModuleType
 
-def execute(config: ModuleType) -> str:
+
+def execute(config: ModuleType, message: str) -> str:
     """Returns the response for the !discord command."""
-    return config.CHAT_COMMANDS['!discord']
+    return str(config.CHAT_COMMANDS["!discord"])

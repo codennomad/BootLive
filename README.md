@@ -22,14 +22,37 @@ A versatile and modular bot for interacting with YouTube live stream chats. Buil
 
 ## Features
 
+### Core Bot Features
 - **Live Chat Connection**: Connects to any public YouTube live stream chat.
 - **Real-time Message Reading**: Reads chat messages in real time.
+- **Smart Message Processing**: Only processes new messages after startup, avoiding reprocessing of chat history.
 - **Scheduled Messages**: Periodically sends automated messages to the chat (e.g., subscription reminders).
-- **Modular Command System**: Responds to specific chat commands (e.g., `!discord`, `!link`). The architecture makes it easy to add new commands.
 - **New User Welcome**: Automatically detects when a new user chats for the first time and sends them a customizable welcome message.
-- **Logging**: Provides detailed console logging for monitoring and debugging.
-- **Testing Suite**: Includes a comprehensive test suite using `unittest` and `unittest.mock`.
-- **CI/CD Pipeline**: Comes with a pre-configured GitHub Actions workflow for continuous integration.
+- **User Ban System**: Persistent ban list with JSON file storage - banned users' messages are automatically ignored.
+- **Command Cooldowns**: Global and per-user cooldown system to prevent spam.
+- **Permission System**: Role-based command access with moderator privileges.
+
+### Advanced Command System
+- **Modular Architecture**: Easy-to-extend command system with automatic loading.
+- **Dynamic Command Management**: Load, unload, and reload commands without restarting the bot.
+- **Hot-Reload Capability**: Modify command code and reload it instantly during runtime.
+- **Built-in Commands**:
+  - `!link` - Shows your channel link
+  - `!discord` - Shows your Discord invite link
+  - `!ban <username>` - Bans a user from interacting (moderators only)
+  - `!unban <username>` - Unbans a previously banned user (moderators only)
+  - `!load <command>` - Loads a command module (moderators only)
+  - `!unload <command>` - Unloads a command module (moderators only)
+  - `!reload <command>` - Reloads a command module (moderators only)
+
+### Development & Quality Assurance
+- **Comprehensive Testing**: Full test suite with 21 tests covering all functionality.
+- **Type Safety**: Complete type annotations with mypy compliance.
+- **Code Quality**: Black formatting and strict linting standards.
+- **Error Handling**: Robust error handling and recovery mechanisms.
+- **Detailed Logging**: Comprehensive logging for monitoring and debugging.
+- **CI/CD Pipeline**: Pre-configured GitHub Actions workflow for continuous integration.
+- **Test Coverage**: Detailed coverage reporting to ensure code quality.
 
 ## Setup and Installation
 
